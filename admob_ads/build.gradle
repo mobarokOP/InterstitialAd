@@ -31,7 +31,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "com.google.android.gms:play-services-ads:24.9.0"
     implementation "com.google.android.ump:user-messaging-platform:4.0.0"
-    implementation "androidx.lifecycle:lifecycle-process:2.10.0"
 
 
 
@@ -47,8 +46,8 @@ publishing {
     publications {
         release(MavenPublication) {
             groupId = 'com.github.mobarokOP'
-            artifactId = 'AdmobAdSdk'
-            version = '2.1.0'
+            artifactId = 'InterstitialAd'
+            version = '1.0.0'
 
             afterEvaluate {
                 from components.release

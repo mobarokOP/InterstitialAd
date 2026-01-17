@@ -129,56 +129,6 @@ public class AdNetwork implements Serializable {
     }
 
 
-    private static AdView adView;
-
-
-
-    public static void loadBanner(Activity activity, int adLayout){
-        LinearLayout adContainer = activity.findViewById(adLayout);
-        adView = new AdView(activity);
-        adView.setAdSize(AdSize.BANNER);
-        adView.setAdUnitId(activity.getResources().getString(R.string.BANNER_ID));
-        adContainer.addView(adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
-
-    }
-
-    public static void loadBannerAd(Activity activity, int adLayout) {
-        LinearLayout adContainer = activity.findViewById(adLayout);
-        adView = new AdView(activity);
-        adView.setAdSize(AdSize.SMART_BANNER);
-        adView.setAdUnitId(activity.getResources().getString(R.string.BANNER_ID));
-        adContainer.addView(adView);
-        // Create an extra parameter that aligns the bottom of the expanded ad to
-        // the bottom of the bannerView.
-        Bundle extras = new Bundle();
-        extras.putString("collapsible", "bottom");
-
-        AdRequest adRequest = new AdRequest.Builder()
-                .addNetworkExtrasBundle(AdMobAdapter.class, extras)
-                .build();
-
-        adView.loadAd(adRequest);
-    }
-
-    public static void destroyBanner(){
-        if (adView != null) {
-            adView.destroy();
-        }
-    }
-
-    public static void pauseBanner(){
-        if (adView != null) {
-            adView.pause();
-        }
-    }
-
-    public static void resumeBanner(){
-        if (adView != null) {
-            adView.resume();
-        }
-    }
 
 
 

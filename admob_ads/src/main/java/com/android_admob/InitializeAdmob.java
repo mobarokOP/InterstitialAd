@@ -20,7 +20,5 @@ public class InitializeAdmob extends AppCompatActivity {
         AdNetwork.setForChild(false);
         AdNetwork.loadInterstitial(this);
 
-        Application application = getApplication();
-        ((MyApplication) application).loadAd(this);
     }
 }

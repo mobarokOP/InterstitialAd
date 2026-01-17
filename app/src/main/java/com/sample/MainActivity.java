@@ -15,14 +15,10 @@ public class MainActivity extends InitializeAdmob {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AdNetwork.loadBannerAd(this, R.id.adLayout);
 
 
     }
 
 
-    public void SHOWADS(View view) {
-        AdNetwork.showAd(this);
-    }
 }
 
